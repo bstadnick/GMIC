@@ -25,6 +25,7 @@ import numpy as np
 import os
 from itertools import repeat
 from multiprocessing import Pool
+import sys
 
 from src.constants import INPUT_SIZE_DICT
 import src.utilities.pickling as pickling
@@ -91,6 +92,7 @@ def main(cropped_exam_list_path, data_prefix, output_exam_list_path, num_process
 
 
 if __name__ == "__main__":
+    print(sys.argv)
     parser = argparse.ArgumentParser(description='Compute and Extract Optimal Centers')
     parser.add_argument('--cropped-exam-list-path')
     parser.add_argument('--data-prefix')
