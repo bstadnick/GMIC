@@ -92,13 +92,13 @@ def main(cropped_exam_list_path, data_prefix, output_exam_list_path, num_process
 
 
 if __name__ == "__main__":
-    print(sys.argv)
     parser = argparse.ArgumentParser(description='Compute and Extract Optimal Centers')
     parser.add_argument('--cropped-exam-list-path')
     parser.add_argument('--data-prefix')
     parser.add_argument('--output-exam-list-path', required=True)
     parser.add_argument('--num-processes', default=20)
     args = parser.parse_args()
+    print(args)
 
     main(
         cropped_exam_list_path=args.cropped_exam_list_path,
