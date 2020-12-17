@@ -24,6 +24,7 @@ from functools import partial
 import scipy.ndimage
 import numpy as np
 import pandas as pd
+import sys
 
 import src.utilities.pickling as pickling
 import src.utilities.reading_images as reading_images
@@ -345,6 +346,7 @@ def crop_mammogram_one_image_short_path(scan, input_data_folder, output_data_fol
 
 
 if __name__ == "__main__":
+    print(sys.argv)
     parser = argparse.ArgumentParser(description='Remove background of image and save cropped files')
     parser.add_argument('--input-data-folder', required=True)
     parser.add_argument('--output-data-folder', required=True)
